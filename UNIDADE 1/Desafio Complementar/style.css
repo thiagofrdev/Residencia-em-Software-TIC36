@@ -1,0 +1,72 @@
+body{
+    background-image: url(imgs/fundo.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+img{
+    border-radius: 2em;
+}
+
+p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: aliceblue;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+
+    max-width: 100%;
+}
+
+.div1, .div2, .div3{
+    background-color: rgb(75,0,130);
+
+    width: 15em;
+    height: 25em;
+    margin: 1.5em;
+    border-radius: 2em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+
+    text-align: justify;
+    transition: 300ms ease-out;
+
+    box-shadow: 0 0 2em 0.5em rgb(155,0,60);
+}
+
+.div1:hover, .div2:hover, .div3:hover{
+    background-color: rgb(155,0,60);
+
+    width: 17em;
+    height: 27em;
+
+    box-shadow: 0 0 2em 0.5em rgb(75,0,130);
+}
+
+@media (max-width: 768px) {
+    .div1, .div2, .div3 {
+        width: 10em;
+        height: 30em;
+
+        padding-top: 1em;
+        padding-bottom: 2.5em;
+    }
+}
