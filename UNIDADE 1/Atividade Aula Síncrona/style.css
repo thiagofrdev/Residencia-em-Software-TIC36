@@ -7,12 +7,13 @@ body{
 }
 
 main{
+    display: flex;
     flex-direction: row;
 }
 
 div{
-    height: 30em;
-    width: 20em;
+    display: flex;
+    flex-direction: row;
 }
 
 img{
@@ -31,24 +32,21 @@ h3{
     color: rgb(243, 81, 186);
 }
 
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 input{
-    margin-bottom: 2em;
+    margin-bottom: 1.5em;
     border-radius: 1.5em;
     border-style: none;
     background-color: rgb(232, 232, 232);
     height: 2.5em;
     width: 15em;
-    padding: 0em 0em 0em 1em;
-}
-
-button{
-    background-color: rgb(243, 81, 186);
-    color: white;
-    font-weight: bold;
-    border-radius: 1.5em;
-    border-style: none;
-    height: 2em;
-    width: 10em;
+    padding: 0em 1em 0em 1em;
 }
 
 .center-display{
@@ -58,31 +56,76 @@ button{
 }
 
 .img-login{
+    height: 30em;
+    width: 20em;
     background-color: blueviolet;
     border-top-left-radius: 2em;
-    border-bottom-left-radius: 2em; 
-    /* box-shadow: 
-    0 -10px 10px -5px rgba(0, 0, 0, 0.3),
-    -10px 0 10px -5px rgba(0, 0, 0, 0.3), 
-    0 10px 10px -5px rgba(0, 0, 0, 0.3);  */
+    border-bottom-left-radius: 2em;
 }
 
-.main-login{
+.main-cad{
+    height: 30em;
+    width: 20em;
     background-color: white;
     border-top-right-radius: 2em;
     border-bottom-right-radius: 2em; 
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* box-shadow: 
-    0 -10px 10px -5px rgba(0, 0, 0, 0.3),
-    10px 0 10px -5px rgba(0, 0, 0, 0.3),
-    0 10px 10px -5px rgba(0, 0, 0, 0.3); */
+}
+
+.btn-active {
+    background-color: rgb(243, 81, 186);
+    color: white;
+}
+
+.btn-inactive {
+    background-color: rgb(212, 212, 212);
+    color: black;
 }
 
 .hidden{
     display: none;
+}
+
+#section-button{
+    background-color: rgb(212, 212, 212);
+    border-radius: 1.5em;
+    margin-bottom: 2em;
+    display: flex;
+    justify-content: center;
+}
+
+#btn-open{
+    background-color: rgb(243, 81, 186);
+    color: white;
+    font-weight: bold;
+    border-radius: 1.5em;
+    border-style: none;
+    height: 2.5em;
+    width: 7em;
+}
+
+
+#btn-open,
+#btn-register,
+#btn-enviar {
+    transition: background-color 0.3s, color 0.3s;
+    background-color: rgb(243, 81, 186);
+    color: white;
+    font-weight: bold;
+    border-radius: 1.5em;
+    border-style: none;
+    height: 2.5em;
+    width: 7em;
+}
+
+#btn-register {
+    background-color: rgb(212, 212, 212);
+    color: black;
+}
+
+#btn-register:active {
+    background-color: rgb(243, 81, 186);
+    color: white;
 }
 
 @media (max-width: 650px) {
@@ -90,7 +133,7 @@ button{
         display: none;
     }
 
-    .main-login{
+    .main-cad{
         border-radius: 2em;
     }
 }

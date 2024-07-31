@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="/js/transition.js"></script>
+    <script src="js/transition.js"></script>
     <title>Tela de Login</title>
 </head>
 <body class="center-display">
@@ -12,17 +12,30 @@
         <div class="img-login center-display">
             <img src="imgs/image.png" alt="Imagem de Login">
         </div>
-        <form>
-            <div class="main-login ">
-                <h3>Restic36</h3>
-                <h2>Trilha 2 - Fullstack</h2>
-
-                <input type="email" placeholder="example@gmail.com" alt="Campo de e-mail">
-                <input type="password" placeholder="Senha" alt="Campo de senha">
-
-                <button>Enviar</button>
+        <div class="main-cad center-display">
+            <h3>Restic36</h3>
+            <h2>Trilha 2- FullStack</h2>
+            <div id="section-button">
+                <button id="btn-open" class="btn-active" onclick="transitionForm()">Entrar</button>
+                <button id="btn-register" class="btn-inactive" onclick="transitionForm()">Cadastrar</button>
             </div>
-        </form>
+            <div id="form-login">
+                <form id="login-form">
+                    <input type="email" placeholder="example@gmail.com" alt="Campo de e-mail">
+                    <input type="password" placeholder="Senha" alt="Campo de senha">
+                    <button id="btn-enviar">Enviar</button>
+                </form>
+            </div>
+            <div id="form-register" class="hidden">
+                <form id="register-form">
+                    <input type="text" placeholder="Nome" alt="Campo de nome">
+                    <input type="email" placeholder="example@gmail.com" alt="Campo de e-mail">
+                    <input type="password" placeholder="Senha" alt="Campo de senha">
+                    <input type="password" placeholder="Confirme a senha" alt="Campo de confirmação de senha">
+                    <button id="btn-enviar">Enviar</button>
+                </form>
+            </div>
+        </div>
     </main>
 </body>
 </html>
