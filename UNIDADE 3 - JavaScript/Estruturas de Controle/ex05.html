@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhaskara</title>
+    <style>
+        body{margin: 0; height: 100vh; background-color: rgb(30, 31, 48); display: flex; justify-content: center; align-items: center; font-family: Georgia, 'Times New Roman', Times, serif;}
+        form{display: flex; justify-content: center; align-items: center; flex-direction: column;}
+        h3{margin-top: 1em;}
+        div{padding: 0.5em;}
+        input{border-style: none;border-radius: 0.5em; width: 3em; height: 3em;}
+        button{border-radius: 1em; border-style: none; height: 2.2em; width: 10em;}
+        textarea{margin: 2em 1em 1.5em 1em; height: 7em; width: 18em; border-radius: 1em; border-style: none; padding: 1em;}
+        .container{padding: 0; background-color: rgb(155, 85, 215); box-shadow: 0em 0em 2em ; height: auto; width: auto; display: flex; justify-content: center; align-items: center; flex-direction: column; border-radius: 2em;}
+        .icognitas{display: flex;}
+    </style>
+</head>
+<body>
+    <div class="container">        
+        <h3>Calculadora de Bhaskara</h3>
+        <img src="../imgs/bhaskara.png" height="90em" style="border-radius: 1em;">
+        <form id="form">
+            <div class="icognitas">
+                <div>
+                    <label for="a">A: </label>
+                    <input type="number" id="a" name="a" step="any" placeholder="A" required>
+                </div>
+
+                <div>
+                    <label for="b">B: </label>
+                    <input type="number" id="b" name="b" step="any" placeholder="B" required>
+                </div>
+
+                <div>
+                    <label for="c">C: </label>
+                    <input type="number" id="c" name="c" step="any" placeholder="C" required>
+                </div>
+            </div>
+            <div>
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+        
+        <textarea id="textarea" readonly>Resultado</textarea>
+    </div>    
+    <script src="ex05.js"></script>
+</body>
+</html>
