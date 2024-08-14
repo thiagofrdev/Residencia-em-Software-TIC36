@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média Escolar 2</title>
+    <style>
+        body{margin: 0; height: 100vh; background-color: rgb(30, 31, 48); display: flex; justify-content: center; align-items: center; font-family: Georgia, 'Times New Roman', Times, serif;}
+        form{display: flex; justify-content: center; align-items: center; flex-direction: column;}
+        h3{margin-top: 1em;}
+        div{padding: 1em;}
+        input{border-style: none;border-radius: 0.5em; width: 15em; height: 2em;}
+        button{border-radius: 1em; border-style: none; height: 2.2em; width: 10em;}
+        textarea{margin: 2em 0em 1.5em 0em; height: 7em; width: 18em; border-radius: 1em; border-style: none; padding: 1em;}
+        .container{padding: 0; background-color: rgb(155, 85, 215); box-shadow: 0em 0em 2em ; height: auto; width: auto; display: flex; justify-content: center; align-items: center; flex-direction: column; border-radius: 2em;}
+        .hidden{display: none;}
+    </style>
+</head>
+<body>
+    <div class="container" id="div-notas">        
+        <h3>Média Escolar 2</h3>
+        <form id="form-notas">
+            <div>
+                <label for="nome">Nome: </label>
+                <input type="text" id="nome" name="nome" placeholder="João da Silva" required>
+            </div>
+
+            <div>
+                <label for="nota1">Nota 1: </label>
+                <input type="number" id="nota1" name="nota1" step="any" placeholder="1ª Nota" required>
+            </div>
+
+            <div>
+                <label for="nota1">Nota 2: </label>
+                <input type="number" id="nota2" name="nota2" step="any" placeholder="2ª Nota" required>
+            </div>
+
+            <div>
+                <label for="nota1">Nota 3: </label>
+                <input type="number" id="nota3" name="nota3" step="any" placeholder="3ª Nota" required>
+            </div>
+
+            <div>
+                <label for="nota1">Nota 4: </label>
+                <input type="number" id="nota4" name="nota4" step="any" placeholder="4ª Nota" required>
+            </div>
+
+            <div>
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+        
+        <textarea id="textarea" readonly></textarea>
+    </div>        
+
+    <div class="container hidden" id="div-final" style="margin-left: 2em; margin-top: 1.2em; align-self: baseline;">
+        <h3>Prova final</h3>
+        <form id="form-final">
+            <div>
+                <label for="nota-final">Nota da Final: </label>
+                <input type="number" id="nota-final" name="nota-final" step="any" placeholder="Nota da prova final" required>
+            </div>
+        </form>
+    </div>
+    <script src="ex04.js"></script>
+</body>
+</html>
