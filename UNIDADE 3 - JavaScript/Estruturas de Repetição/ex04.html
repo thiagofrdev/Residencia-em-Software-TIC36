@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progressão Geométrica</title>
+    <style>
+        body{margin: 0; height: 100vh; background-color: rgb(30, 31, 48); display: flex; justify-content: center; align-items: center; font-family: Georgia, 'Times New Roman', Times, serif;}
+        form{display: flex; justify-content: center; align-items: center; flex-direction: column;}
+        h3{margin-top: 1em;}
+        div{padding: 1em;}
+        input{border-style: none;border-radius: 0.5em; width: 15em; height: 2em;}
+        select{border-style: none;border-radius: 0.5em; width: 8em; height: 2em;}
+        button{border-radius: 1em; border-style: none; height: 2.2em; width: 10em;}
+        textarea{margin: 2em 0em 1.5em 0em; height: 7em; width: 18em; border-radius: 1em; border-style: none; padding: 1em;}
+        .container{padding: 0; background-color: rgb(155, 85, 215); box-shadow: 0em 0em 2em ; height: auto; width: auto; display: flex; justify-content: center; align-items: center; flex-direction: column; border-radius: 2em;}
+    </style>
+</head>
+<body>
+    <div class="container">        
+        <h3>Progressão Geométrica</h3>
+        <form id="form">
+            <div>
+                <label for="inicio">Início:</label>
+                <input type="number" id="inicio" name="inicio" step="any" placeholder="Número incial" required>
+            </div>
+
+            <div>
+                <label for="progressao">Progressão:</label>
+                <input type="number" id="progressao" name="progressao" step="any" placeholder="Razão de Progressão" required>
+            </div>
+
+            <div>
+                <label for="qtdElementos">Qtd. elementos: </label>
+                <input type="number" id="qtdElementos" name="qtdElementos" step="any" placeholder="Quantidade" required>
+            </div>
+
+            <div>
+                <select id="select">
+                    <option>Ordem</option>
+                    <option value="crescente">Crescente</option>
+                    <option value="decrescente">Decrescente</option>
+                    <option value="oscilante">Oscilante</option>
+                </select>
+            </div>
+
+            <div>
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+        
+        <textarea id="textarea" readonly></textarea>
+    </div>    
+    <script src="ex04.js"></script>
+</body>
+</html>
