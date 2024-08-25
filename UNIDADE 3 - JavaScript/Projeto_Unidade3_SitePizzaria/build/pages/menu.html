@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/build/styles/style-menu.css">
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&display=swap" rel="stylesheet">
+    <title>Pizzaria</title>
+</head>
+<body>
+    <!-- BARRA DE NAVEGAÇÃO -->
+    <nav class="nav-bar">
+        <div class="nav-logo">
+            <img src="/build/imgs/photos/logo-pizza.png" class="img-logo" alt="Logo da Pizzaria">
+        </div>
+        <div class="nav-pages anek-devanagari">
+            <a href="/build/index.html" class="link-pages">HOME</a>
+            <a href="quem-somos.html" class="link-pages">QUEM SOMOS</a>
+            <a href="#" class="link-pages">CARDÁPIO</a>
+            <a href="trabalhe_conosco.html" class="link-pages">TRABALHE CONOSCO</a>
+        </div>
+    </nav>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+        <div class="main-display">
+            <div class="pizza-selection">
+                <select id="filterPizzas" onchange="filtrarPizzas()">
+                    <option value="todas">Todas</option>
+                    <option value="vegetariana">Vegetariana</option>
+                    <option value="carne">Carne</option>
+                    <option value="doce">Doce</option>
+                </select>
+            </div>
+            <div class="pizza-card" data-category="carne">
+                <img src="/build/imgs/photos/pizzas/carnes-calabresa.png" class="pizza-image" alt="Pizza de Calabresa">
+                <p class="pizza-title">Calabresa</p>
+                <p class="ingredients">Calabresa, Cebola, Azeitona, Orégano</p>
+                <p class="price">R$45,00</p>
+                <button class="btn-add-cart">
+                   <img src="/build/imgs/icons/carrinho-icone.png" class="img-cart" alt="Logo carrinho de compras">
+                </button>
+            </div>
+            <div class="pizza-card" data-category="doce">
+                <img src="/build/imgs/photos/pizzas/doce-chocolateComMorango.png" class="pizza-image" alt="Pizza de Calabresa">
+                <p class="pizza-title">Chocolate com Morango</p>
+                <p class="ingredients">Chocolate ao leite, Morango, Granulado de Chocolate</p>
+                <p class="price">R$55,00</p>
+                <button class="btn-add-cart">
+                    <img src="/build/imgs/icons/carrinho-icone.png" class="img-cart" alt="Logo carrinho de compras">
+                </button>
+            </div>
+            <div class="pizza-card" data-category="vegetariana">
+                <img src="/build/imgs/photos/pizzas/vegetariana-marguerita.png" class="pizza-image" alt="Pizza de Calabresa">
+                <p class="pizza-title">Marguerita</p>
+                <p class="ingredients">Tomate, Mozzarella, Manjericão</p>
+                <p class="price">R$40,00</p>
+                <button class="btn-add-cart">
+                    <img src="/build/imgs/icons/carrinho-icone.png" class="img-cart" alt="Logo carrinho de compras">
+                </button>
+            </div>
+            <div class="pizza-card" data-category="carne">
+                <img src="/build/imgs/photos/pizzas/carnes-frangoComCatupiry.png" class="pizza-image" alt="Pizza de Calabresa">
+                <p class="pizza-title">Frango com Catupiry</p>
+                <p class="ingredients">Frango desfiado, Catupiry, Milho, Azeitonas</p>
+                <p class="price">R$40,00</p>
+                <button class="btn-add-cart">
+                    <img src="/build/imgs/icons/carrinho-icone.png" class="img-cart" alt="Logo carrinho de compras">
+                </button>
+            </div>
+            <div class="pizza-card" data-category="carne">
+                <img src="/build/imgs/photos/pizzas/carnes-portuguesa.png" class="pizza-image" alt="Pizza de Calabresa">
+                <p class="pizza-title">Portuguesa</p>
+                <p class="ingredients">Presunto, Ovo, Cebola, Pimentão, Azeitonas, Mozzarella</p>
+                <p class="price">R$40,00</p>
+                <button class="btn-add-cart">
+                    <img src="/build/imgs/icons/carrinho-icone.png" class="img-cart" alt="Logo carrinho de compras">
+                </button>
+            </div>
+            <div class="pizza-card" data-category="vegetariana">
+                <img src="/build/imgs/photos/pizzas/vegetariana-quatroQueijos.png" class="pizza-image" alt="Pizza de Calabresa">
+                <p class="pizza-title">Quatro Queijos</p>
+                <p class="ingredients">Mozzarella, Parmesão, Gorgonzola, Provolone</p>
+                <p class="price">R$45,00</p>
+                <button class="btn-add-cart">
+                    <img src="/build/imgs/icons/carrinho-icone.png" class="img-cart" alt="Logo carrinho de compras">
+                </button>
+            </div>
+            <div class="pizza-card" data-category="vegetariana">
+                <img src="/build/imgs/photos/pizzas/vegetariana-vegetariana.png" class="pizza-image" alt="Pizza de Calabresa">
+                <p class="pizza-title">Vegetariana</p>
+                <p class="ingredients">Tomate, Cebola, Pimentão, Azeitonas, Milho, Champignon</p>
+                <p class="price">R$35,00</p>
+                <button class="btn-add-cart">
+                    <img src="/build/imgs/icons/carrinho-icone.png" class="img-cart" alt="Logo carrinho de compras">
+                </button>
+            </div>
+            <div class="pizza-card" data-category="doce">
+                <img src="/build/imgs/photos/pizzas/doce-bananaComCanela.png" class="pizza-image" alt="Pizza de Calabresa">
+                <p class="pizza-title">Banana com Canela</p>
+                <p class="ingredients">Banana, Açúcar, Canela, Mozzarella</p>
+                <p class="price">R$35,00</p>
+                <button class="btn-add-cart">
+                    <img src="/build/imgs/icons/carrinho-icone.png" class="img-cart" alt="Logo carrinho de compras">
+                </button>
+            </div>
+            <div class="pizza-card" data-category="doce">
+                <img src="/build/imgs/photos/pizzas/doce-doceDeLeiteComCoco.png" class="pizza-image" alt="Pizza de Calabresa">
+                    <p class="pizza-title">Doce de Leite com Coco</p>
+                    <p class="ingredients">Doce de Leite, Coco ralado, Chocolate branco</p>
+                    <p class="price">R$45,00</p>
+                    <button class="btn-add-cart">
+                        <img src="/build/imgs/icons/carrinho-icone.png" class="img-cart" alt="Logo carrinho de compras">
+                    </button>
+            </div>
+        </div>
+        <div class="main-display-cart">
+        </div>
+    </main>
+    <!-- RODAPÉ -->
+    <footer>
+        <div class="footer-bar">
+            Euston Rd., London N1 9AL, Reino Unido, próximo a estação 9 3/4
+        </div>
+    </footer>
+    <script src="/build/js/script.js"></script>
+</body>
+</html>

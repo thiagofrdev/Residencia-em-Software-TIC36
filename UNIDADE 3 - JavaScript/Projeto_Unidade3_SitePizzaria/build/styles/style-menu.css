@@ -1,0 +1,325 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,1) 35%, rgba(117,0,0,1) 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    height: 7rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+a{
+    margin: 0em 1.5em;
+    text-decoration: none;
+    color: rgb(158, 87, 0);
+}
+
+a:hover{
+    color: azure;
+}
+
+main{
+    flex: 1;
+    color: aliceblue;
+    height: 7rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 7em;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+}
+
+footer{
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: aliceblue;
+    height: 7rem;
+    width: 100%;
+}
+
+/* NAVIGATION BAR */
+.img-logo{
+    height: 8em;
+}
+
+.img-cart{
+    height: 1.5em;
+}
+
+.nav-logo, .nav-pages, .nav-cart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-logo{
+    height: 100%;
+    width: 10%;
+}
+
+.nav-pages{
+    height: 100%;
+    width: 80%;
+}
+
+.nav-cart{
+    height: 100%;
+    width: 10%;
+}
+
+/* MAIN CONTENT */
+.main-display{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: brown;
+    width: 50em;
+    border-radius: 2em;
+    box-sizing: border-box;
+    margin: 2em 2em;
+}
+
+#filterPizzas{
+    margin: 2em 0;
+    height: 3em;
+    width: 15em;
+    border-radius: 2em;
+    padding: 0 1em;
+    font-size: 1em;
+}
+
+.pizza-card{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(100, 18, 0);
+    border-radius: 1em;
+    padding: 1em;
+    margin: 1em;
+    width: 90%;
+}
+
+.pizza-image{
+    border-radius: 1em;
+    width: 10em;
+}
+
+.pizza-title{
+    max-width: 6em;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.ingredients{
+    font-size: 1em;
+    max-width: 10em;
+    text-align: center;
+}
+
+.price{
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.btn-add-cart{
+    background-color: black;
+}
+
+.main-display-cart{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: brown;
+    width: 30em;
+    border-radius: 2em;
+    box-sizing: border-box;
+    margin: 2em 2em;
+    height: 20em;
+    overflow-y: auto; /* Adiciona rolagem se o conteúdo exceder a altura */
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(100, 18, 0);
+    border-radius: 1em;
+    padding: 1em;
+    margin: 0.5em 0; /* Menor margem para evitar o excesso de espaço */
+    width: 90%; /* Ajusta a largura para preencher o contêiner */
+    box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
+}
+
+.cart-item-image {
+    width: 3em;
+    border-radius: 0.5em;
+}
+
+.cart-item-title {
+    max-width: 8em;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.cart-item-quantity {
+    width: 2em;
+    text-align: center;
+    font-size: 1.2em;
+    margin: 0 0.5em;
+    border-radius: 1em;
+}
+
+.cart-item-price, .cart-item-total-price {
+    font-size: 1.2em;
+    text-align: center;
+}
+
+/* FOOTER */
+.footer-bar{
+    background-color: black;
+
+}
+
+/* FONTS */
+.anek-devanagari {
+    font-family: "Anek Devanagari", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: 1.7em;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }
+
+  @media (max-width: 1200px) {
+    .image-main{
+        flex-direction: column;
+    }
+    .image-main-reverse{
+        flex-direction: column;
+    }
+    #pizza-main-img{
+        margin: 1.5em 0;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    main{
+        padding-top: 16em;
+    }
+
+    .chef-img {
+        height: 15em; /* Diminui a altura para telas menores */
+        max-width: 20em; /* Diminui a largura máxima */
+    }
+    
+}
+
+@media (max-width: 850px){
+    main{
+        padding-top: 5em;
+        flex-direction: column;
+    }
+
+    nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+        height: 30rem;
+        border-bottom: 3px white solid;        
+        position: relative;
+    }
+
+    .img-logo{
+        height: 8em;
+    }
+    
+    .img-cart{
+        height: 1.5em;
+    }
+    
+    .nav-logo, .nav-pages, .nav-cart{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .nav-logo{
+        height: 100%;
+        width: 10%;
+    }
+    
+    .nav-pages{
+        height: 100%;
+        width: 80%;
+    }
+    
+    .nav-cart{
+        height: 100%;
+        width: 10%;
+    }
+
+    .main-title-call{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 65em;
+    }
+
+    .main-display, .main-display-cart{
+        width: 90%;
+    }
+
+    .pizza-card{
+        flex-direction: column;
+        height: 20em;
+        width: 15em;
+    }
+}
+
+@media (max-width: 768px) {
+    .chef-img {
+        height: 12em; /* Diminui ainda mais a altura para telas menores */
+        max-width: 15em; /* Diminui a largura máxima */
+    }
+
+}
+
+@media (max-width: 680px) {
+    #pizza-main-img{border-radius: 10em; width: 30em;margin: 2em 2em;}
+}
+
+@media (max-width: 480px) {
+    .chef-img {
+        height: 10em; /* Diminui ainda mais a altura para telas pequenas */
+        max-width: 12em; /* Diminui a largura máxima */
+    }
+}
