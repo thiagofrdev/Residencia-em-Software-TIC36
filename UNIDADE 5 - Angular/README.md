@@ -1,0 +1,1 @@
+A pasta 'curso-angular' é referente do curso do Matheus Battisti, no YouTube. Acompanhei esse curso como foma de complemento aos estudos de Angular.
