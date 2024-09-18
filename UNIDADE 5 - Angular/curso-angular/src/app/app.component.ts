@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { FristComponentComponent } from './components/frist-component/frist-component.component';
 import {ParentDataComponent} from "./components/parent-data/parent-data.component";
+import {DirectivesComponent} from "./components/directives/directives.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FristComponentComponent, ParentDataComponent],
+  imports: [RouterOutlet, FristComponentComponent, ParentDataComponent, DirectivesComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
