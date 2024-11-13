@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ListService } from '../../services/list.service';
 
 interface Animal {
   name: string
@@ -22,8 +23,14 @@ export class ListRenderComponent {
     {name: 'Gatonso', type: 'Gato', age: 2}
   ];
 
+  constructor(private listService: ListService){}//Criação de um servço 
+
   animalsDetails = '';
   showAge(animal: Animal){
     this.animalsDetails = `O pet ${animal.name} tem ${animal.age} anos!`
+  }
+
+  removeAnimal(animal: Animal){
+    console.log('Removendo ')
   }
 }
